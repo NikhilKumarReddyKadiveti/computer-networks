@@ -1,0 +1,28 @@
+#include <stdio.h>
+ #include <string.h>
+ 
+ void bitStuff(char *input) {
+     char output[100] = "";
+     int count = 0;
+     
+     for (int i = 0; input[i] != '\0'; i++) {
+         if (input[i] == '1') count++;
+         else count = 0;
+         
+         strncat(output, &input[i], 1);
+         if (count == 5) {
+             strcat(output, "0");
+             count = 0;
+         }
+     }
+     
+     printf("Stuffed Data: %s\n", output);
+ }
+ 
+ int main() {
+     char input[50];
+     printf("Enter binary data: ");
+     scanf("%s", input);
+     bitStuff(input);
+     return 0;
+ }
