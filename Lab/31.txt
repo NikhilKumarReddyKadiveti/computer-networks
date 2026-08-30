@@ -1,0 +1,41 @@
+#include <stdio.h>
+ #include <string.h>
+ 
+ #define MAX_ENTRIES 5  // Maximum number of ARP table entries
+ 
+ // Structure for ARP table entry
+ struct ARPEntry {
+     char ip_address[16];  // IPv4 address in string format
+     char mac_address[18]; // MAC address
+ };
+ 
+ // Static ARP Table
+ struct ARPEntry arp_table[MAX_ENTRIES] = {
+     {"192.168.1.1", "00:1A:2B:3C:4D:5E"},
+     {"192.168.1.2", "00:1B:3C:4D:5E:6F"},
+     {"192.168.1.3", "00:1C:4D:5E:6F:7A"},
+     {"192.168.1.4", "00:1D:5E:6F:7A:8B"},
+     {"192.168.1.5", "00:1E:6F:7A:8B:9C"}
+ };
+ 
+ // Function to perform ARP lookup
+ void arp_lookup(char *ip) {
+     for (int i = 0; i < MAX_ENTRIES; i++) {
+         if (strcmp(arp_table[i].ip_address, ip) == 0) {
+             printf("MAC Address for IP %s: %s\n", ip, arp_table[i].mac_address);
+             return;
+         }
+     }
+     printf("No entry found for IP %s in ARP Table.\n", ip);
+ }
+ 
+ int main() {
+     char ip_address[16];
+ 
+     printf("Enter IP Address to resolve (e.g., 192.168.1.2): ");
+     scanf("%s", ip_address);
+ 
+     arp_lookup(ip_address);
+ 
+     return 0;
+ }
