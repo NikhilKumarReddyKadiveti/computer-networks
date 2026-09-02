@@ -1,0 +1,7 @@
+Traffic,Protocol,Packet_Loss_%,Packet_Delivery_%,Delay_ms,Throughput_Mbps
+Low,TCP,1.0,99.75,8.55,9.80
+Low,UDP,1.0,99.00,5.25,9.93
+Medium,TCP,5.0,98.75,10.75,9.00
+Medium,UDP,5.0,95.00,6.25,9.65
+High,TCP,15.0,96.25,16.25,7.00
+High,UDP,15.0,85.00,8.75,8.95

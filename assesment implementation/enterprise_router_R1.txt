@@ -1,0 +1,35 @@
+enable
+configure terminal
+
+hostname R1
+no ip domain-lookup
+
+interface gigabitEthernet0/0
+ description LAN1
+ ip address 10.10.1.1 255.255.255.0
+ no shutdown
+exit
+
+interface gigabitEthernet0/1
+ description LAN2
+ ip address 10.10.2.1 255.255.255.0
+ no shutdown
+exit
+
+interface gigabitEthernet0/2
+ description LAN3
+ ip address 10.10.3.1 255.255.255.0
+ no shutdown
+exit
+
+interface gigabitEthernet0/3
+ description LAN4
+ ip address 10.10.4.1 255.255.255.0
+ no shutdown
+exit
+
+end
+write memory
+
+show ip interface brief
+show ip route

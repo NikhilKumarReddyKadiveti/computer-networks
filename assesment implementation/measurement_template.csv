@@ -1,0 +1,7 @@
+Traffic,Protocol,Packets_Sent,Packets_Received,Packet_Delivery_%,Packet_Loss_%,Average_Delay_ms,Throughput_Mbps,Retransmissions,Source
+Low,TCP,,,,,,,,Packet Tracer / Wireshark
+Low,UDP,,,,,,,,Packet Tracer / Wireshark
+Medium,TCP,,,,,,,,Packet Tracer / Wireshark
+Medium,UDP,,,,,,,,Packet Tracer / Wireshark
+High,TCP,,,,,,,,Packet Tracer / Wireshark
+High,UDP,,,,,,,,Packet Tracer / Wireshark
